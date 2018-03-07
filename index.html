@@ -26,21 +26,42 @@
             <div class="col-sm">
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Search Term</label>
+                        <label for="exampleInputEmail1">Search Term:</label>
                         <input type="Title" class="form-control" id="title" aria-describedby="Title" placeholder="Enter your title search here">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1"># of Items</label>
-                        <input type="Items" class="form-control" id="length" placeholder="# of articles">
+                        <label for="recordNumber">Number of Records to Retrieve:</label>
+                        <select class="form-control" id="length">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <div class="form-group">
+                        <label for="startYear">Start Year(Optional)</label>
+                        <input type="startYear" class="form-control" id="startYear" placeholder="ie. 1958">
                     </div>
+                    <div class="form-group">
+                        <label for="endYear">End Year(Optional)</label>
+                        <input type="endYear" class="form-control" id="endYear" placeholder="ie. 1969">
+                    </div>
+
                     <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Clear</button>
+
                 </form>
             </div>
             <div class="col-sm">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
             </div>
         </div>
     </div>
