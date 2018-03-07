@@ -3,6 +3,14 @@ queryURL += '?' + $.param({
   'api-key': "c15b92fa39a44bf189d243dcc60bdefa"
 });
 
+$('#search').on('click', function(){
+
+});
+
+$('#clear').on('click', function (){
+
+});
+
 $.ajax({
   url: queryURL,
   method: 'GET',
