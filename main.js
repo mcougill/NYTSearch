@@ -8,8 +8,19 @@ $('#search').on('click', function () {
     if (title) {
         queryURL += $.param({
             'q': title
+
         })
-    }
+
+            $.ajax({
+                url: queryURL,
+                method: 'GET',
+            }).then(function (result) {
+                console.log(result);
+                console.log(queryURL);
+            });
+        
+        console.log('Working so far');
+    };
 
 
 
