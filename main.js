@@ -10,3 +10,11 @@ $.ajax({
   console.log(result);
   console.log(queryURL);
 });
+
+var title = $('#title').val().trim();
+
+var length = $('#length').val().trim();;
+
+var start = $('#start').val().trim();;
+
+var end = $('#end').val().trim();;
