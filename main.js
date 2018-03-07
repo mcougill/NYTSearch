@@ -3,23 +3,39 @@ queryURL += '?' + $.param({
     'api-key': "c15b92fa39a44bf189d243dcc60bdefa",
 });
 
-$('#search').on('click', function () {
+//var length = $('#length').val().trim();;
 
-    if (title) {
+//var start = $('#start').val().trim();;
+
+//var end = $('#end').val().trim();;
+
+$(document).on('click', '#search', search) 
+
+
+function search(){
+
+    var title = $('#title').val().trim();
+
+    event.preventDefault();
+
+    console.log('step one')
+    if ($('#title').val().trim()) {
+        console.log('Step two')
         queryURL += $.param({
             'q': title
 
         })
+        console.log(queryURL);
 
-            $.ajax({
-                url: queryURL,
-                method: 'GET',
-            }).then(function (result) {
-                console.log(result);
-                console.log(queryURL);
-            });
-        
-        console.log('Working so far');
+        $.ajax({
+            url: queryURL,
+            method: 'GET',
+        }).then(function (result) {
+            console.log(result);
+            console.log(queryURL);
+        });
+
+        console.log('step three');
     };
 
 
@@ -27,34 +43,8 @@ $('#search').on('click', function () {
 
 
 
-
-    $.ajax({
-        url: queryURL,
-        method: 'GET',
-    }).then(function (result) {
-        console.log(result);
-        console.log(queryURL);
-    });
-
-
-});
+};
 
 $('#clear').on('click', function () {
 
 });
-
-$.ajax({
-    url: queryURL,
-    method: 'GET',
-}).then(function (result) {
-    console.log(result);
-    console.log(queryURL);
-});
-
-var title = $('#title').val().trim();
-
-var length = $('#length').val().trim();;
-
-var start = $('#start').val().trim();;
-
-var end = $('#end').val().trim();;
